@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory | Max’s Precious Minerals</title>
+    
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="../assets/images/logo.png" alt="Max's Precious Minerals Logo">
+            <h1>MAX’S <span>PRECIOUS MINERALS</span></h1>
+        </div>
+        
+        <div class="menu-btn" id="menu-icon">☰</div>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="machinery.html" class="active">Machinery</a></li>
+                <li><a href="mining.html">Mining Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>OUR PREMIUM FLEET</h2>
+            <p>Browse our extensive catalog of heavy-duty equipment available for sale.</p>
+        </section>
+
+        <section id="inventory">
+            <div class="filter-btns">
+                <button class="filter-btn active" onclick="filterSelection('all', this)">All</button>
+                <button class="filter-btn" onclick="filterSelection('earthmoving', this)">Earthmoving</button>
+                <button class="filter-btn" onclick="filterSelection('trucks', this)">Trucks & Trailers</button>
+                <button class="filter-btn" onclick="filterSelection('lifting', this)">Cranes & Lifts</button>
+                <button class="filter-btn" onclick="filterSelection('specialized', this)">Specialized</button>
+                <button class="filter-btn" onclick="filterSelection('attachments', this)">Tools & Attachments</button>
+            </div>
+
+            <div class="machinery-grid">
+                
+                <div class="product-card filter-item earthmoving show">
+                    <div class="card-image">
+                        <img src="../assets/images/excavators.webp" alt="Excavator">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Excavators</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('excavators')">View Specs</button>
+                    </div>
+                </div>
+
+                <div class="product-card filter-item earthmoving show">
+                    <div class="card-image">
+                        <img src="../assets/images/motor-graders.webp" alt="Motor Grader">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Motor Graders</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('motor-graders')">View Specs</button>
+                    </div>
+                </div>
+
+                <div class="product-card filter-item earthmoving show">
+                    <div class="card-image">
+                        <img src="../assets/images/track-type-tractors.webp" alt="Track Type Tractor">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Track Type Tractors</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('track-tractors')">View Specs</button>
+                    </div>
+                </div>
+
+                <div class="product-card filter-item earthmoving show">
+                    <div class="card-image">
+                        <img src="../assets/images/wheel-loaders.webp" alt="Wheel Loader">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Wheel Loaders</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('wheel-loaders')">View Specs</button>
+                    </div>
+                </div>
+                
+                <div class="product-card filter-item earthmoving show">
+                    <div class="card-image">
+                        <img src="../assets/images/wheel-excavators.webp" alt="Wheel Excavator">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Wheel Excavators</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('wheel-excavators')">View Specs</button>
+                    </div>
+                </div>
+
+                <div class="product-card filter-item earthmoving show">
+                    <div class="card-image">
+                        <img src="../assets/images/long-reach-excavator.webp" alt="Long Reach Excavator">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Long Reach Excavators</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('long-reach')">View Specs</button>
+                    </div>
+                </div>
+
+                <div class="product-card filter-item earthmoving show">
+                    <div class="card-image">
+                        <img src="../assets/images/skidsteers.webp" alt="Skidsteer">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Skidsteers</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('skidsteers')">View Specs</button>
+                    </div>
+                </div>
+
+                <div class="product-card filter-item trucks show">
+                    <div class="card-image">
+                        <img src="../assets/images/artic-rear-dumps.webp" alt="Arctic Rear Dump">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Arctic Rear Dumps</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('arctic-dumps')">View Specs</button>
+                    </div>
+                </div>
+
+                <div class="product-card filter-item trucks show">
+                    <div class="card-image">
+                        <img src="../assets/images/off-highway-trucks.webp" alt="Off-Highway Truck">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Off-Highway Trucks</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('off-highway')">View Specs</button>
+                    </div>
+                </div>
+
+                <div class="product-card filter-item trucks show">
+                    <div class="card-image">
+                        <img src="../assets/images/water-trucks.webp" alt="Water Tanker">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Water Tanker/Trucks</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('water-tanker')">View Specs</button>
+                    </div>
+                </div>
+
+                <div class="product-card filter-item trucks show">
+                    <div class="card-image">
+                        <img src="../assets/images/mechanics-truck.webp" alt="Mechanics Truck">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Mechanics Trucks</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('mechanics-truck')">View Specs</button>
+                    </div>
+                </div>
+
+                <div class="product-card filter-item trucks show">
+                    <div class="card-image">
+                        <img src="../assets/images/fuel-lube-trucks.webp" alt="Fuel & Lube Truck">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Fuel & Lube Trucks</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('fuel-lube')">View Specs</button>
+                    </div>
+                </div>
+
+                <div class="product-card filter-item trucks show">
+                    <div class="card-image">
+                        <img src="../assets/images/trailers.webp" alt="Trailer">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Trailers</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('trailers')">View Specs</button>
+                    </div>
+                </div>
+
+                <div class="product-card filter-item lifting show">
+                    <div class="card-image">
+                        <img src="../assets/images/RoughTerrain.webp" alt="Rough Terrain Crane">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Rough Terrain Cranes</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('rough-crane')">View Specs</button>
+                    </div>
+                </div>
+
+                <div class="product-card filter-item lifting show">
+                    <div class="card-image">
+                        <img src="../assets/images/telescopic-forklifts.webp" alt="Telescopic Forklift">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Telescopic Forklifts</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('tele-forklift')">View Specs</button>
+                    </div>
+                </div>
+
+                <div class="product-card filter-item lifting show">
+                    <div class="card-image">
+                        <img src="../assets/images/general-forklifts.webp" alt="General Forklift">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>General Forklifts</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('gen-forklift')">View Specs</button>
+                    </div>
+                </div>
+                
+                <div class="product-card filter-item lifting show">
+                    <div class="card-image">
+                        <img src="../assets/images/scissor-manlifts.webp" alt="Scissor Manlift">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Scissor Manlifts</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('scissor-lift')">View Specs</button>
+                    </div>
+                </div>
+
+                <div class="product-card filter-item specialized show">
+                    <div class="card-image">
+                        <img src="../assets/images/crushers-screeners.webp" alt="Crusher & Screener">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Crushers & Screeners</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('crushers')">View Specs</button>
+                    </div>
+                </div>
+
+                <div class="product-card filter-item specialized show">
+                    <div class="card-image">
+                        <img src="../assets/images/material-handlers.webp" alt="Material Handler">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Material Handlers</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('handlers')">View Specs</button>
+                    </div>
+                </div>
+
+                <div class="product-card filter-item specialized show">
+                    <div class="card-image">
+                        <img src="../assets/images/scrap-1.webp" alt="Scrap Processing">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Scrap & Demolition Processing</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('scrap-processing')">View Specs</button>
+                    </div>
+                </div>
+                
+                <div class="product-card filter-item specialized show">
+                    <div class="card-image">
+                        <img src="../assets/images/ultra-high-demolition.webp" alt="Ultra High Demolition">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Ultra High Demolition</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('ultra-demo')">View Specs</button>
+                    </div>
+                </div>
+
+                <div class="product-card filter-item specialized show">
+                    <div class="card-image">
+                        <img src="../assets/images/vibratory-rollers.webp" alt="Vibratory Roller">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Vibratory Rollers</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('rollers')">View Specs</button>
+                    </div>
+                </div>
+
+                <div class="product-card filter-item specialized show">
+                    <div class="card-image">
+                        <img src="../assets/images/pipelayers.webp" alt="Pipelayer">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Pipelayers</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('pipelayers')">View Specs</button>
+                    </div>
+                </div>
+                
+                <div class="product-card filter-item specialized show">
+                    <div class="card-image">
+                        <img src="../assets/images/stabilizers-reclaimers.webp" alt="Stabilizer & Reclaimer">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Stabilizers & Reclaimers</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('stabilizers')">View Specs</button>
+                    </div>
+                </div>
+                
+                <div class="product-card filter-item specialized show">
+                    <div class="card-image">
+                        <img src="../assets/images/generators.webp" alt="Generator">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Generators</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('generators')">View Specs</button>
+                    </div>
+                </div>
+                
+                <div class="product-card filter-item specialized show">
+                    <div class="card-image">
+                        <img src="../assets/images/sweepers.webp" alt="Sweeper">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Sweepers</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('sweepers')">View Specs</button>
+                    </div>
+                </div>
+
+                <div class="product-card filter-item attachments show">
+                    <div class="card-image">
+                        <img src="../assets/images/hydraulic-hammers.webp" alt="Hydraulic Hammer">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Hydraulic Hammers</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('hydro-hammers')">View Specs</button>
+                    </div>
+                </div>
+
+                <div class="product-card filter-item attachments show">
+                    <div class="card-image">
+                        <img src="../assets/images/work-tools.jpg" alt="Work Tools">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Work Tools</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('work-tools')">View Specs</button>
+                    </div>
+                </div>
+                
+                <div class="product-card filter-item attachments show">
+                    <div class="card-image">
+                        <img src="../assets/images/z-a-miscellaneous.webp" alt="Heavy Attachments">
+                        <span class="badge">For Sale</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Heavy Equipment Attachments</h3>
+                        <button class="btn primary full-width" onclick="openSpecs('heavy-attachments')">View Specs</button>
+                    </div>
+                </div>
+
+            </div> 
+        </section>
+
+        <div id="specs-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                
+                <div class="modal-body">
+                    <div class="modal-img">
+                        <img id="modal-image" src="" alt="Machine Preview">
+                    </div>
+                    
+                    <div class="modal-info">
+                        <h3 id="modal-title">Machine Name</h3>
+                        <p id="modal-desc">Description goes here...</p>
+                        
+                        <h4>Technical Specifications:</h4>
+                        <ul id="modal-specs" class="specs-list">
+                            </ul>
+
+                        <a href="contact.html" class="btn primary">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Max’s Precious Minerals. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
