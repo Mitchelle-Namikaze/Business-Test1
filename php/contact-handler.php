@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // 1. Set the recipient email address (Your client's email)
-    $to = "maxpreciousminerals@gmail.com"; 
+    $to = "nyakehkamanda5@gmail.com"; 
     $subject = "New Contact Form Submission - Max's Precious Minerals";
 
     // 2. Get and sanitize form data
