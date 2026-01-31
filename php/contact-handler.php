@@ -1,35 +1,30 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // 1. Set the recipient email address (Your client's email)
-    $to = "nyakehkamanda5@gmail.com"; 
-    $subject = "New Contact Form Submission - Max's Precious Minerals";
-
-    // 2. Get and sanitize form data
+    // 1. Collect form data
     $fname = strip_tags(trim($_POST["fname"]));
     $lname = strip_tags(trim($_POST["lname"]));
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-    $message = strip_tags(trim($_POST["message"]));
+    $message = trim($_POST["message"]);
 
-    // 3. Prepare the email content
-    $email_content = "First Name: $fname\n";
-    $email_content .= "Last Name: $lname\n";
+    // 2. Set your email address (where you want to receive messages)
+    $recipient = "nyakehkamanda5@gmail.com"; 
+
+    // 3. Create email content
+    $subject = "New Contact from Max's Precious Minerals";
+    $email_content = "Name: $fname $lname\n";
     $email_content .= "Email: $email\n\n";
     $email_content .= "Message:\n$message\n";
 
-    // 4. Build email headers
-    $headers = "From: $fname $lname <$email>";
+    // 4. Create email headers
+    $email_headers = "From: $fname <$email>";
 
     // 5. Send the email
-    if (mail($to, $subject, $email_content, $headers)) {
-        // Success code for JavaScript to read
-        echo "success";
+    if (mail($recipient, $subject, $email_content, $email_headers)) {
+        echo "success"; // This tells your JS it worked
     } else {
-        // Error code
         echo "error";
     }
 } else {
-    // Not a POST request
-    header("Location: ../html/contact.html");
-    exit;
+    echo "invalid_request";
 }
 ?>
